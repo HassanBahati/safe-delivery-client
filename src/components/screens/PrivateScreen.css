@@ -1,0 +1,39 @@
+
+  .Appnavbar_logo {
+    width: 245px;
+  }
+  
+  .Appnavbar {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .Appheader {
+    background: #fff
+  }
+  .Appnav {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .Appnavbar_links{
+    display: inline block;
+    list-style-type: none;
+  }
+  
+  .Appnavbar_linkItem{
+    display: inline-block;
+    margin-right: 20x;
+    padding-right: 20px;
+  }
+  
+  
+  .Appcontainer {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: white
+  }
+  

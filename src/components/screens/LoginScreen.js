@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./LoginScreen.css";
+
 
 const LoginScreen = ({ history }) => {
   const [email, setEmail] = useState("");
@@ -10,7 +11,7 @@ const LoginScreen = ({ history }) => {
 
   useEffect(() => {
     if (localStorage.getItem("authToken")) {
-      history.push("/");
+      history.push("/dashboard");
     }
   }, [history]);
 
@@ -32,7 +33,7 @@ const LoginScreen = ({ history }) => {
 
       localStorage.setItem("authToken", data.token);
 
-      history.push("/");
+      history.push("/dashboard");
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {
@@ -42,6 +43,9 @@ const LoginScreen = ({ history }) => {
   };
 
   return (
+    <Fragment>
+  
+
     <div className="login-screen">
       <form onSubmit={loginHandler} className="login-screen__form">
         <h3 className="login-screen__title">Login</h3>
@@ -85,6 +89,7 @@ const LoginScreen = ({ history }) => {
         </span>
       </form>
     </div>
+    </Fragment>
   );
 };
 

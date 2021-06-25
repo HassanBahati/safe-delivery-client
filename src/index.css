@@ -6,9 +6,18 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ line-height: 1.7;
   background: #eee;
   color: #333;
+  height: 100vh;
+}
+
+
+/* for making root id full height */
+#root {
+  height: 100%;
 }
 
 .form-group,
@@ -70,4 +79,66 @@ body {
   color: #fff;
   text-align: center;
   margin: 0.5rem 0;
+}
+
+
+/* checkout steps  */
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.checkout-steps > div.active{
+  border-top-color: #ff8000;
+  color: #ff8000;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/* table style  */
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+/* table header  */
+.styled-table thead tr {
+  background-color: #FF8000;
+  color: #ffffff;
+  text-align: left;
+  
+}
+/* cell style  */
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+/* style table row  */
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #fff;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #858280;
+}
+/* make active row look different  */
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
 }
